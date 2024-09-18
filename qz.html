@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosque Page</title>
+    <link rel="stylesheet" href="qz.css">
+</head>
+<body>
+
+<!-- Mosque Page -->
+<div class="container">
+    <h1 id="mosqueName">Mosque Name</h1>
+    <div class="options">
+        <button id="qaarjHasanaBtn">Qaarj Hasana</button>
+        <button id="zakatBtn">Zakat</button>
+    </div>
+
+    <!-- Qaarj Hasana Form -->
+    <div id="qaarjHasanaForm" class="form-container" style="display: none;">
+        <h2>Qaarj Hasana Registration</h2>
+        <form id="qaarjHasanaRegistrationForm">
+            <div class="input-group">
+                <label for="mosqueNameQH">Mosque Name</label>
+                <input type="text" id="mosqueNameQH" name="mosqueNameQH" required>
+            </div>
+            <div class="input-group">
+                <label for="userName">User Name</label>
+                <input type="text" id="userName" name="userName" required>
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="input-group">
+                <label for="nidNo">NID No</label>
+                <input type="text" id="nidNo" name="nidNo" required>
+            </div>
+            <div class="input-group">
+                <label for="bank">Bank</label>
+                <select id="bank" name="bank" required>
+                    <option value="">Select Bank</option>
+                    <option value="bank1">Bank 1</option>
+                    <option value="bank2">Bank 2</option>
+                    <option value="bank3">Bank 3</option>
+                    <option value="bank4">Bank 4</option>
+                    <option value="bank5">Bank 5</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="bankAccountNumber">Bank Account Number</label>
+                <input type="text" id="bankAccountNumber" name="bankAccountNumber" required>
+            </div>
+            <div class="input-group">
+                <label for="mobileBank">Mobile Bank</label>
+                <select id="mobileBank" name="mobileBank" required>
+                    <option value="">Select Mobile Bank</option>
+                    <option value="mobileBank1">Mobile Bank 1</option>
+                    <option value="mobileBank2">Mobile Bank 2</option>
+                    <option value="mobileBank3">Mobile Bank 3</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="mobileBankNumber">Mobile Bank Number</label>
+                <input type="text" id="mobileBankNumber" name="mobileBankNumber" required>
+            </div>
+            <div class="form-buttons">
+                <button type="submit">Save</button>
+                <button type="button">Save and Add Another</button>
+                <button type="button">Save and Continue Editing</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Zakat Section -->
+    <div id="zakatSection" class="form-container" style="display: none;">
+        <h2>Zakat Options</h2>
+        <button id="zakatProviderBtn">Zakat Provider</button>
+        <button id="zakatReceiverBtn">Zakat Receiver</button>
+
+        <!-- Zakat Provider Form -->
+        <div id="zakatProviderForm" class="form-container" style="display: none;">
+            <h2>Zakat Provider Registration</h2>
+            <form id="zakatProviderRegistrationForm">
+                <div class="input-group">
+                    <label for="providerName">Name</label>
+                    <input type="text" id="providerName" name="providerName" required>
+                </div>
+                <div class="input-group">
+                    <label for="providerAddress">Address</label>
+                    <input type="text" id="providerAddress" name="providerAddress" required>
+                </div>
+                <div class="input-group">
+                    <label for="providerBank">Bank Name</label>
+                    <input type="text" id="providerBank" name="providerBank" required>
+                </div>
+                <div class="input-group">
+                    <label for="providerAccountNumber">A/C Number</label>
+                    <input type="text" id="providerAccountNumber" name="providerAccountNumber" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Zakat Receiver Form -->
+        <div id="zakatReceiverForm" class="form-container" style="display: none;">
+            <h2>Zakat Receiver Registration</h2>
+            <form id="zakatReceiverRegistrationForm">
+                <div class="input-group">
+                    <label for="qaarjHasanaId">Qaarj Hasana ID</label>
+                    <input type="text" id="qaarjHasanaId" name="qaarjHasanaId" required>
+                </div>
+                <div class="input-group">
+                    <label for="headOfFamilyName">Head of Family Name</label>
+                    <input type="text" id="headOfFamilyName" name="headOfFamilyName" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalNumberOfBoys">Total Number of Boys</label>
+                    <input type="number" id="totalNumberOfBoys" name="totalNumberOfBoys" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalNumberOfGirls">Total Number of Girls</label>
+                    <input type="number" id="totalNumberOfGirls" name="totalNumberOfGirls" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalWorkingPersons">Total Working Persons</label>
+                    <input type="number" id="totalWorkingPersons" name="totalWorkingPersons" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalEarnablePersons">Total Earnable Persons</label>
+                    <input type="number" id="totalEarnablePersons" name="totalEarnablePersons" required>
+                </div>
+                <div class="input-group">
+                    <label for="sourceOfIncome">Source of Income</label>
+                    <input type="text" id="sourceOfIncome" name="sourceOfIncome" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalMonthlyIncome">Total Monthly Income</label>
+                    <input type="number" id="totalMonthlyIncome" name="totalMonthlyIncome" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalMonthlyLacking">Total Monthly Lacking</label>
+                    <input type="number" id="totalMonthlyLacking" name="totalMonthlyLacking" required>
+                </div>
+                <div class="input-group">
+                    <label for="loanAmount">Loan Amount</label>
+                    <input type="number" id="loanAmount" name="loanAmount" required>
+                </div>
+                <div class="input-group">
+                    <label for="monthlySavingAmount">Monthly Saving Amount</label>
+                    <input type="number" id="monthlySavingAmount" name="monthlySavingAmount" required>
+                </div>
+                <div class="input-group">
+                    <label for="monthlyInstallmentAmount">Monthly Installment Amount</label>
+                    <input type="number" id="monthlyInstallmentAmount" name="monthlyInstallmentAmount" required>
+                </div>
+                <div class="input-group">
+                    <label for="totalUnpaidInstallmentAmount">Total Unpaid Installment Amount</label>
+                    <input type="number" id="totalUnpaidInstallmentAmount" name="totalUnpaidInstallmentAmount" required>
+                </div>
+                <div class="input-group">
+                    <label for="haveBangla">Have Bangla if Quran</label>
+                    <select id="haveBangla" name="haveBangla" required>
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="reciteQuranDaily">Recite Quran Daily</label>
+                    <select id="reciteQuranDaily" name="reciteQuranDaily" required>
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="photo">Add Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<script src="qz.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Login</title>
+    <link rel="stylesheet" href="mosque.css">
+</head>
+<body>
+
+<!-- Registration Form -->
+<div class="container" id="register-container">
+    <h2>Register Mosque</h2>
+    <form id="registerForm">
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="input-group">
+            <label for="password">Set Password</label>
+            <input type="password" id="password" name="password" required>
+            <div class="error" id="passwordError"></div>
+        </div>
+        <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div class="error" id="confirmPasswordError"></div>
+        </div>
+        <fieldset>
+            <legend>Mosque Details</legend>
+            <div class="input-group">
+                <label for="mosqueName">Mosque Name</label>
+                <input type="text" id="mosqueName" name="mosqueName" required>
+            </div>
+            <div class="input-group">
+                <label for="village">Village</label>
+                <input type="text" id="village" name="village" required>
+            </div>
+            <div class="input-group">
+                <label for="district">District</label>
+                <input type="text" id="district" name="district" required>
+            </div>
+            <div class="input-group">
+                <label for="thana">Thana</label>
+                <input type="text" id="thana" name="thana" required>
+            </div>
+            <div class="input-group">
+                <label for="division">Division</label>
+                <input type="text" id="division" name="division" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <!-- <legend>Imam Details</legend> -->
+            <div class="input-group">
+                <label for="imamName">Imam Name</label>
+                <input type="text" id="imamName" name="imamName" required>
+            </div>
+            <div class="input-group">
+                <label for="imamMobile">Imam Mobile Number</label>
+                <input type="tel" id="imamMobile" name="imamMobile" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <!-- <legend>Muazzin Details</legend> -->
+            <div class="input-group">
+                <label for="muazzinName">Muazzin Name</label>
+                <input type="text" id="muazzinName" name="muazzinName" required>
+            </div>
+            <div class="input-group">
+                <label for="muazzinMobile">Muazzin Mobile Number</label>
+                <input type="tel" id="muazzinMobile" name="muazzinMobile" required>
+            </div>
+        </fieldset>
+        <button type="submit" class="submit-btn"><a href="qz.html">Register Mosque</a></button>
+    </form>
+    <div class="link">
+        <p>Already registered? <a href="#" id="goToLogin">Login here</a></p>
+    </div>
+</div>
+
+<!-- Login Form -->
+<div class="container" id="login-container" style="display: none;">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" name="loginEmail" required>
+            <div class="error" id="loginEmailError"></div>
+        </div>
+        <div class="input-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+            <div class="error" id="loginPasswordError"></div>
+        </div>
+        <button type="submit" class="submit-btn"><a href="qz.html">Login</a></button>
+    </form>
+    <div class="link">
+        <p>Not registered yet? <a href="#" id="goToRegister">Register here</a></p>
+    </div>
+</div>
+
+<script src="mosque.js"></script>
+
+</body>
+</html>
