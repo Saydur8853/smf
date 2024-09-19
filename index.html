@@ -26,7 +26,7 @@
         <ul class="menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="mosque.html">Mosque</a></li>
+            <li><a href="#" id="mosqueBtn">Mosque</a></li>
             <li><a href="#ie">Islamic Employment</a></li>
             <li><a href="#letssmeup">Lets SME UP</a></li>
             <li><a href="#fsac">FSAC</a></li>
@@ -37,6 +37,47 @@
         </div>
        </div>
     </nav>
+    <!-- Modal Box -->
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Register Mosque</h2>
+        <form id="registrationForm">
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="mosqueName">Mosque Name</label>
+                    <input type="text" id="mosqueName" name="mosqueName" required>
+
+                    <label for="village">Village</label>
+                    <input type="text" id="village" name="village" required>
+
+                    <label for="district">District</label>
+                    <input type="text" id="district" name="district" required>
+
+                    <label for="thana">Thana</label>
+                    <input type="text" id="thana" name="thana" required>
+
+                    <label for="division">Division</label>
+                    <input type="text" id="division" name="division" required>
+                </div>
+                <div class="form-column">
+                    <label for="imamName">Imam Name</label>
+                    <input type="text" id="imamName" name="imamName" required>
+
+                    <label for="imamMobile">Imam Mobile Number</label>
+                    <input type="text" id="imamMobile" name="imamMobile" required>
+
+                    <label for="muazzinName">Muazzin Name</label>
+                    <input type="text" id="muazzinName" name="muazzinName" required>
+
+                    <label for="muazzinMobile">Muazzin Mobile Number</label>
+                    <input type="text" id="muazzinMobile" name="muazzinMobile" required>
+                </div>
+            </div>
+            <button type="submit" class="register-btn">Register Mosque</button>
+        </form>
+    </div>
+</div>
     <section class="home" id="home">
         <div class="max-width">
             <!-- <div class="home-content">
@@ -52,9 +93,8 @@
                     <img src="mosque.jpeg" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text"> <span class="typing-2"></span></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, aperiam. Eaque perferendis consequatur error! Itaque consectetur repellendus quis. A, earum quam. Asperiores quidem, ut ea voluptatum fugit reiciendis laudantium praesentium!</p>
-                    <a href="/image/My CV.pdf">Read More</a>
+                    <p>Social Micro Finance is an Islamic economic based investment company in Bangladesh. Its aim is to work for implementing the 17 Sustainable Development Goals (The SDGs are no poverty, zero hunger, good health and well-being, quality education, gender equality, clean water and sanitation, affordable and clean energy, decent work and economic growth, industry, innovation and infrastructure, reduced inequalities, sustainable cities and communities, responsible consumption and production, climate action, life below water, life on land, peace, justice, and strong institutions and partnerships for the goals), increasing purchasing power of the customer, controlling the inflation rate and also establishing a sustainable investment policy all over the world. Social Micro Finance started pilot operation on Thursday 30-July-2020 AD and 8-ZilHaj, 1441 Hijri. On 20-July-2023, Thursday, 1-Muharram-1445 Hijri, Prof. Dr. Mohammad Mahbubur Rahman and Muid Khan inaugurated the program at Jhenaidah Baitun Noor Jame Mosque. Later on, Friday, August 18, 2023, the official proceedings began on the 1st of the month of Safar, 1445 Hijri. This company is the reflection of the research jointly made by Dr. Muhammad Mahbubur Rahman & Muid Khan. The mission of the company is to establish the "Qarrj Hasana" which is an interest-free loan giving system according to the holy Quran and also establish “Peace, Justice and Strong Institutions”, according to the United Nations SDG-16. The vision of the company is to establish an Islamic and ethical Investment system, achieving 17 Sustainable development goals and proper utilization of solar energy in an environment friendly manner with prosperous human resources, society and economy.</p>
+                    <!-- <a href="#">Read More</a> -->
                 </div>
             </div>
         <!-- </div> -->
@@ -66,28 +106,28 @@
                 <div class="image-container">
                     <img src="qaarj.jpeg" alt="Image 1">
                     <div class="intro">Qaarj Hasana</div>
-                    <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illo, ipsam sapiente perspiciatis aperiam corrupti impedit? Soluta accusantium omnis perspiciatis!</div>
+                    <div class="details">This is a Mosque-based program where an account holder can make a monthly savings of BDT 30, and seek for interest-free loan as Qarrj Hasana, which can exceed their existing savings. </div>
                 </div>
             </div>
             <div class="box">
                 <div class="image-container">
                     <img src="zakat.jpeg" alt="Image 2">
                     <div class="intro">Zakat</div>
-                    <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur rerum dolore dolorem officia, corporis dolorum fugiat non quibusdam cupiditate dignissimos.</div>
+                    <div class="details">This program is also a mosque-based one where people with financial capability will deposit their Zakat amount in the mosque fund, and it will be distributed equally among the needy people.</div>
                 </div>
             </div>
             <div class="box">
                 <div class="image-container">
                     <img src="ie.jpeg" alt="Image 3">
                     <div class="intro">Islamic Employment</div>
-                    <div class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur rerum perferendis porro officiis expedita dolores eligendi dolorum optio earum quod?</div>
+                    <div class="details">Training and investment will be arranged for the entrepreneurs, making a sustainable interest-free deal with the investors.</div>
                 </div>
             </div>
             <div class="box">
                 <div class="image-container">
                     <img src="skill.png" alt="Image 4">
                     <div class="intro">Skill Assesment</div>
-                    <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore modi reiciendis velit asperiores, earum expedita sequi consectetur molestiae unde vel!</div>
+                    <div class="details">This program will empower youth with the post-training assessment.</div>
                 </div>
             </div>
         </div>

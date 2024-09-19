@@ -31,6 +31,34 @@ $(document).ready(function(){
     });
    
 });
+const modal = document.getElementById('registrationModal');
+const mosqueBtn = document.getElementById('mosqueBtn');
+const closeModal = document.getElementsByClassName('close')[0];
+
+// Open the modal when "Mosque" is clicked
+mosqueBtn.onclick = function() {
+    modal.style.display = 'block';
+}
+
+// Close the modal when the close (x) is clicked
+closeModal.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Close the modal when clicking outside of the modal content
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Prevent form from submitting to demonstrate modal functionality
+const form = document.getElementById('registrationForm');
+form.onsubmit = function(event) {
+    event.preventDefault();
+    alert('Mosque registered successfully!');
+    modal.style.display = 'none';
+}
 let counter = 1;
 setInterval(function(){
     document.getElementById('radio' + counter).checked = true;
