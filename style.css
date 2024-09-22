@@ -8,31 +8,21 @@
 html{
     scroll-behavior: smooth;
 }
-/* ::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #ececef;
-}
-::-webkit-scrollbar-thumb {
-    background: rgb(193, 9, 226);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(142, 161, 188);
-} */
+
 section{
-    padding: 100px 0;
+    padding: 30px 0;
 }
 .max-width{
-    max-width: 800px;
+    max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
+
 .about, .service, .mosque, .ie, .letssmeup, .fsac, .bs{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
-.service .serv-content{
+.service .boxes-container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -43,42 +33,23 @@ section .title{
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
-/* section .title::before{
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 180px;
-    height: 3px;
-    background: #111;
-    transform: translateX(-50%);
-} */
-/* section .title::after{
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    font-size: 20px;
-    color: rgb(20, 107, 220);
-    padding: 0 5px;
-    background: rgb(255, 255, 255);
-    transform: translateX(-50%);
-} */
-
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
+
 .navbar{
    position: fixed;
    width: 100%;
    padding: 30px 0;
    font-family: 'ubuntu','sans-serif';
    transition: all 0.3s ease;
+   z-index: 1000;
 }
 .navbar.sticky{
     padding: 15px 0;
@@ -92,6 +63,7 @@ section .title{
 .logo img {
     height: 40px; /* Adjust logo size */
 }
+
 .navbar .menu li{
      list-style: none;
      display: inline-block;
@@ -105,7 +77,7 @@ section .title{
 }
 nav .menu li a:hover{
     background-color: rgb(63, 18, 243);
-    color: rgb(210, 6, 251);
+    color: white;
     box-shadow: 0 0 10px rgb(21, 2, 2);
 }
 .navbar.sticky .menu li a:hover{
@@ -147,38 +119,50 @@ nav .menu li a:hover{
 }
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; 
-    z-index: 1; 
+    position: fixed;
+    z-index: 1000; /* Ensure it’s above other content */
     left: 0;
-    top: 70px;
-    width: 100%; 
-    height: auto; 
-    background-color: rgba(0, 0, 0, 0); /* Black background with opacity */
-    justify-content: center;
-    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
+/* Modal content box */
 .modal-content {
-    background-color: #fff;
+    position: relative;
+    margin: 10% auto; /* Center the modal */
     padding: 20px;
-    border-radius: 5px;
-    width: 50%;
-    max-width: 600px;
-    margin: 50px auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #888;
+    width: 80%; /* Adjust width as needed */
+    background-color: #d094df;
+    border-radius: 8px;
 }
 
+/* Close button (X) */
 .close {
-    float: right;
-    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.close:hover {
-    color: red;
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
+/* Form inside modal adjustments */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
 h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -212,7 +196,7 @@ h2 {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #290240;
     color: white;
     border: none;
     border-radius: 4px;
@@ -221,7 +205,7 @@ h2 {
 }
 
 .register-btn:hover {
-    background-color: #218838;
+    background-color: #17153B;
 }
 
 .home{
@@ -243,21 +227,7 @@ h2 {
 .home .home-content .text-1{
     font-size: 75px;
 }
-.btn{
-    padding: 10px 35px;
-    border-color: transparent;
-    border: 1px solid rgb(224, 50, 50);
-    color: rgb(21, 19, 19);
-    outline: none;
-    transition: .6s ease;
-}
-.btn:hover{
-    cursor: pointer;
-    background-color: rgb(25, 189, 235);
-    color: black;
-    box-shadow: 0 0 5px rgb(129, 35, 35);
-    font-weight: bold;
-}
+
 .about .about-content .left{
     width: 30%;
 }
@@ -270,32 +240,10 @@ h2 {
 .about .about-content .right{
     width: 70%;
 }
-.about .about-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about .about-content .right .text span{
-    color: rgb(20, 107, 220);
-}
+
 .about .about-content .right p{
-    text-align: justify;
-}
-.about .about-content .right a{
-    display: inline-block;
-    background: rgb(20, 107, 220);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid rgb(20, 107, 220);
-    transition: all 0.3s ease;
-}
-.about .about-content .right a:hover{
-    color: rgb(20, 107, 220);
-    background: none;
+    text-align: center;
+    /* margin: 1em; */
 }
 .service {
     text-align: center;
@@ -307,6 +255,7 @@ h2 {
     color: #333;
     margin-bottom: 40px; /* Adds spacing below the header */
 }
+
 
 .boxes-container {
     display: flex;
@@ -353,11 +302,13 @@ h2 {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    text-align: center;
+    
 }
 
 .box:hover .details {
@@ -431,37 +382,109 @@ footer {
 }
 
 /* responsive media query start */
-/* Tablet view (up to 1024px) */
-@media screen and (max-width: 1024px) {
-    .max-width {
-        padding: 0 40px; /* Reduce padding */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
     }
-    .navbar .menu li a {
-        font-size: 16px; /* Adjust font size */
-        margin-left: 15px; /* Reduce space between menu items */
+}
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
     }
-    .about .about-content .left,
-    .about .about-content .right {
-        width: 100%; /* Full width for better stacking */
-        text-align: center; /* Center content for mobile */
+    .navbar{
+        padding: 20px 0;
     }
-    .about .about-content .left img {
-        width: 100%; /* Make image responsive */
-        height: auto;
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .menu-btn i.active::after {
+        display: block;
+        /* styles for the active state */
+    }
+    .navbar .menu{
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #ac51c5;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        display: block;
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    /* .home .home-content .text-2{
+        font-size: 70px;
+    } */
+    .max-width{
+        max-width: 930px;
     }
     .home {
         height: 600px; /* Reduce height of the home section */
     }
-    .home .home-content .text-1 {
-        font-size: 50px; /* Smaller heading */
+    .about .about-content .column{
+        width: 100%;
     }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .boxes-container .box{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .modal-content {
+        width: 90%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* .about .about-content .left,
+    .about .about-content .right {
+        width: 100%; /* Full width for better stacking */
+        /* text-align: center; /* Center content for mobile */
+    /* } */ 
+    /* .about .about-content .left img {
+        width: 100%; /* Make image responsive */
+        /* height: auto; */
+    /* }  */
+    
     .boxes-container {
         flex-direction: column; /* Stack boxes vertically */
         gap: 10px; /* Reduce space between boxes */
         align-items: center;
     }
     .box {
-        width: 50%; /* Make boxes full width */
+        width: 100%; /* Make boxes full width */
         height: 250px; /* Adjust box height */
     }
     .scroll-up-btn {
@@ -478,29 +501,17 @@ footer {
 }
 
 /* Mobile view (up to 768px) */
-@media screen and (max-width: 768px) {
-    .navbar .max-width {
-        padding: 0 20px;
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
     }
-    .navbar .menu li {
-        display: block; /* Stack menu items vertically */
-        margin-bottom: 10px; /* Space between items */
+    .modal-content {
+        width: 95%;
     }
-    .menu-btn {
-        display: block; /* Show menu button on mobile */
+    .services .boxes-container .box{
+        width: 100%;
     }
-    nav .menu {
-        display: none; /* Hide menu */
-    }
-    nav.active .menu {
-        display: block; /* Show menu when active */
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        background-color: rgb(193, 9, 226);
-        padding: 10px;
-        border-radius: 6px;
-    }
+
     .home {
         height: 500px; /* Reduce height for mobile */
     }
@@ -531,17 +542,23 @@ footer {
     }
 }
 
+
 /* Small mobile view (up to 480px) */
-@media screen and (max-width: 480px) {
-    .navbar .menu li a {
-        font-size: 14px; /* Further reduce font size */
-    }
-    .home .home-content .text-1 {
-        font-size: 25px; /* Smaller heading */
+@media (max-width: 500px) {
+    /* .home .home-content .text-2{
+        font-size: 50px;
+    } */
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
     }
     .boxes-container {
         flex-direction: column; /* Stack boxes */
-    }
+     } 
     .about .about-content .right .text {
         font-size: 18px; /* Adjust text size */
     }
