@@ -85,6 +85,164 @@
             </div> -->
         </div>
     </section>
+    <!-- Apply Now Section -->
+  <section id="apply-now" class="apply-now">
+    <h2>Apply Now</h2>
+    <div class="apply-container">
+        <div class="apply-box" id="qarj-hasana">
+            <h3>Qarj Hasana</h3>
+            <button class="apply-btn" data-modal="qarjModal">Apply</button>
+        </div>
+        <div class="apply-box" id="zakat">
+            <h3>Zakat</h3>
+            <button class="apply-btn" data-modal="zakatModal">Apply</button>
+        </div>
+        <div class="apply-box" id="islamic-employment">
+            <h3>Islamic Employment</h3>
+            <button class="apply-btn" data-modal="employmentModal">Apply</button>
+        </div>
+        <div class="apply-box" id="supply-chain-partner">
+            <h3>Supply Chain Partner</h3>
+            <button class="apply-btn" data-modal="scpModal">Apply</button>
+        </div>        
+    </div>
+
+  <!-- Qaarj Hasana Modal -->
+<div id="qarjModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Qaarj Hasana</h2>
+        
+        <!-- Registration Section -->
+        <div id="qarjRegistrationSection">
+            <h3>Qaarj Hasana Registration</h3>
+            <form id="qarjRegistrationForm">
+                <label for="mosqueName">Mosque Name</label>
+                <input type="text" id="mosqueName" placeholder="Enter Mosque Name" required>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Your Name" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Enter Address" required>
+
+                <label for="nid">NID Number</label>
+                <input type="text" id="nid" placeholder="Enter NID Number" required>
+
+                <label for="bankingOptions">Banking Options</label>
+                <select id="bankingOptions" required>
+                    <option value="">Select Banking Option</option>
+                    <option value="bank1">Bank 1</option>
+                    <option value="bank2">Bank 2</option>
+                    <option value="bank3">Bank 3</option>
+                    <option value="bank4">Bank 4</option>
+                    <option value="bank5">Bank 5</option>
+                </select>
+
+                <label for="bankAccount">Bank Account Number</label>
+                <input type="text" id="bankAccount" placeholder="Enter Bank Account Number" required>
+
+                <label for="mobileBankingOptions">Mobile Financial Service Option</label>
+                <select id="mobileBankingOptions" required>
+                    <option value="">Select Mobile Banking Option</option>
+                    <option value="mobile1">Nagad</option>
+                    <option value="mobile2">Bkash</option>
+                    <option value="mobile3">Upay</option>
+                </select>
+
+                <label for="mobileBankNumber">Mobile Financial Service Number</label>
+                <input type="text" id="mobileBankNumber" placeholder="Enter Mobile Banking Number" required>
+
+                <div class="form-buttons">
+                    <button type="button" class="save-btn">Save</button>
+                    <button type="button" class="save-add-btn">Save and Add Another</button>
+                    <button type="button" class="save-edit-btn">Save and Continue Editing</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Application Section -->
+        <div id="qarjApplySection" style="display: none;">
+            <h3>Apply for Qaarj Hasana</h3>
+            <form id="qarjApplyForm">
+                <label for="qarjId">Qaarj Hasana ID No</label>
+                <input type="text" id="qarjId" placeholder="Enter Qaarj Hasana ID No" required>
+
+                <label for="headOfFamily">Head of Family Name</label>
+                <input type="text" id="headOfFamily" placeholder="Enter Head of Family Name" required>
+
+                <label for="totalBoys">Total Members (Boys)</label>
+                <input type="number" id="totalBoys" placeholder="Enter Number of Boys" required>
+
+                <label for="totalGirls">Total Members (Girls)</label>
+                <input type="number" id="totalGirls" placeholder="Enter Number of Girls" required>
+
+                <label for="workablePersons">Total Workable Persons</label>
+                <input type="number" id="workablePersons" placeholder="Enter Number of Workable Persons" required>
+
+                <label for="earnablePersons">Total Earnable Persons</label>
+                <input type="number" id="earnablePersons" placeholder="Enter Number of Earnable Persons" required>
+
+                <label for="incomeSource">Source of Income</label>
+                <input type="text" id="incomeSource" placeholder="Enter Source of Income" required>
+
+                <label for="monthlyIncome">Total Monthly Income</label>
+                <input type="number" id="monthlyIncome" placeholder="Enter Total Monthly Income" required>
+
+                <label for="monthlyExpense">Total Monthly Expense</label>
+                <input type="number" id="monthlyExpense" placeholder="Enter Total Monthly Expense" required>
+
+                <label for="loanAmount">Loan Amount</label>
+                <input type="number" id="loanAmount" placeholder="Enter Loan Amount" required>
+
+                <label for="savingsAmount">Monthly Savings Amount</label>
+                <input type="number" id="savingsAmount" placeholder="Enter Monthly Savings Amount" required>
+
+                <label for="installmentAmount">Monthly Installment Amount</label>
+                <input type="number" id="installmentAmount" placeholder="Enter Monthly Installment Amount" required>
+
+                <label for="unpaidInstallment">Total Unpaid Installment Amount</label>
+                <input type="number" id="unpaidInstallment" placeholder="Enter Unpaid Installment Amount" required>
+
+                <label><input type="checkbox" id="banglaQuran" value="translated"> Have Bangla Translation of Quran</label>
+                <label><input type="checkbox" id="reciteQuran" value="recite"> Recite Quran Daily</label>
+
+                <label for="incomeExpenseDiff">Income Expense Difference Amount</label>
+                <input type="number" id="incomeExpenseDiff" placeholder="Difference Amount" readonly>
+
+                <button type="submit" class="apply-btn">Apply</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- Zakat Modal -->
+    <div id="zakatModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Zakat form content here -->
+        </div>
+    </div>
+
+    <!-- Islamic Employment Modal -->
+    <div id="employmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Islamic Employment form content here -->
+        </div>
+    </div>
+    <!-- Supply Chain Partner Modal -->
+     <div id="scpModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Islamic Employment form content here -->
+        </div>
+    </div>
+  </section>
+
     <section class="about" id="about">
         <!-- <div class="max-width"> -->
             <h2 class="title">About Us</h2>
