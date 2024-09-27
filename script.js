@@ -91,57 +91,57 @@ window.addEventListener('click', function (event) {
         event.target.style.display = 'none';
     }
 });
-// Handle the form submissions for save actions (mocked functionality)
-document.querySelectorAll('.form-buttons button').forEach(button => {
-    button.addEventListener('click', function () {
-        alert(`Action: ${this.textContent}`);
-        // Reset the form and optionally close the modal
-        this.closest('form').reset();
-    });
+// Show the registration form when 'Register here' is clicked
+document.getElementById('showQarjRegister').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('qarjLoginForm').style.display = 'none';
+    document.getElementById('qarj-registration-form').style.display = 'block';
+});
+
+// Handle registration form submission
+document.getElementById('qarjRegisterForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Registered successfully! Redirecting to login...');
+    // After registration, redirect to login form
+    document.getElementById('qarj-registration-form').style.display = 'none';
+    document.getElementById('qarjLoginForm').style.display = 'block';
+});
+
+// Handle login form submission
+document.getElementById('qarjLoginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Logged in successfully! Redirecting to apply form...');
+    // After login, show the apply form
+    document.getElementById('qarjLoginForm').style.display = 'none';
+    document.getElementById('qarj-application-form').style.display = 'block';
+});
+// Show Forgot Password Form
+document.getElementById('forgotPasswordLink').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('qarjLoginForm').style.display = 'none';
+    document.getElementById('forgot-password-form').style.display = 'block';
+});
+
+// Handle Forgot Password Form Submission
+document.getElementById('forgotPasswordForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Password reset instructions sent. Please check your email.');
+    document.getElementById('forgot-password-form').style.display = 'none';
+    document.getElementById('qarjLoginForm').style.display = 'block';
+});
+
+// Back to Login from Forgot Password Form
+document.getElementById('backToLogin').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('forgot-password-form').style.display = 'none';
+    document.getElementById('qarjLoginForm').style.display = 'block';
 });
 
 // Handle apply form submission
-document.getElementById('qarjApplyForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    alert('Qaarj Hasana application submitted successfully!');
-    this.reset();
-});
-// Variables to manage modal sections
-const registrationSection = document.getElementById('qarjRegistrationSection');
-const applySection = document.getElementById('qarjApplySection');
-
-// Registration Form Save Button
-document.querySelector('.save-btn').addEventListener('click', function () {
-    // Assume registration is successful and show apply section
-    registrationSection.style.display = 'none';
-    applySection.style.display = 'block';
-    alert('Registration successful. You can now apply for Qaarj Hasana.');
+document.getElementById('qarjApplyForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Application submitted successfully!');
+    // You can add additional actions here after applying
 });
 
-// Calculate Income-Expense Difference
-document.getElementById('monthlyIncome').addEventListener('input', calculateDifference);
-document.getElementById('monthlyExpense').addEventListener('input', calculateDifference);
-
-function calculateDifference() {
-    const income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
-    const expense = parseFloat(document.getElementById('monthlyExpense').value) || 0;
-    document.getElementById('incomeExpenseDiff').value = income - expense;
-}
-
-// Apply Form Submission
-document.getElementById('qarjApplyForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    // Check if the user is registered and has savings
-    const qarjId = document.getElementById('qarjId').value;
-    const savingsAmount = parseFloat(document.getElementById('savingsAmount').value) || 0;
-
-    if (!qarjId || savingsAmount <= 0) {
-        alert('You must be registered and have savings to apply for Qaarj Hasana.');
-        return;
-    }
-
-    alert('Qaarj Hasana application submitted successfully!');
-    this.reset();
-});
 

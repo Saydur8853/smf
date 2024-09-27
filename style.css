@@ -140,6 +140,7 @@ nav .menu li a:hover{
     max-width: 600px;
     border-radius: 8px;
     text-align: left;
+    position: relative;
 }
 /* Modal Styles */
 .modal-content label {
@@ -153,14 +154,18 @@ nav .menu li a:hover{
     font-size: 1.5rem;
     color: #333;
 }
-
-.modal-content input,
-.modal-content select {
-    width: calc(100% - 20px);
-    padding: 10px;
+.modal-content h3 {
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    font-size: 1.5rem;
+}
+
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .modal-content .form-buttons {
@@ -169,33 +174,92 @@ nav .menu li a:hover{
     justify-content: space-between;
 }
 
-.modal-content .form-buttons button {
-    flex: 1;
+.modal-content button {
+    width: 100%;
     padding: 10px;
-    border: none;
     background-color: #007bff;
-    color: #fff;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
-.modal-content .form-buttons button:hover {
+.modal-content button:hover {
     background-color: #0056b3;
 }
-/* Close button (X) */
-.close {
-    position: absolute;
-    top: 5eem;
-    right: 30rem;
-    color: black;
-    font-size: 24px;
-    font-weight: bolder;
-    cursor: pointer;
+
+.modal-content .register-link, .modal-content .forgot-password {
+    margin-top: 10px;
+    font-size: 0.9rem;
 }
 
+.modal-content .register-link a, .modal-content .forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal-content .register-link a:hover, .modal-content .forgot-password a:hover {
+    text-decoration: underline;
+}
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Adjust gap as needed */
+}
+.login-btn {
+    padding: 10px 15px;
+    background-color: #007bff; /* Your button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.forgot-password-link {
+    color: #007bff; /* Same color as button */
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+/* Form Layout for Labels and Inputs */
+.form-layout .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Label styles for alignment and spacing */
+.form-layout label {
+    flex: 1;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Input styles for uniformity */
+.form-layout input,
+.form-layout select {
+    flex: 2;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Close button (X) */
+.close {
+    color: black;
+    float: inline-end;
+    font-size: 28px;
+    font-weight: bold;
+}
 .close:hover,
 .close:focus {
-    color: #000;
+    color: red;
     text-decoration: none;
     cursor: pointer;
 }
@@ -249,6 +313,7 @@ h2 {
 .register-btn:hover {
     background-color: #17153B;
 }
+
 
 .home{
     display: flex;
