@@ -86,11 +86,11 @@ document.querySelectorAll('.modal .close').forEach(closeBtn => {
 });
 
 // Close the modal when clicking outside of the modal content
-window.addEventListener('click', function (event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-});
+// window.addEventListener('click', function (event) {
+//     if (event.target.classList.contains('modal')) {
+//         event.target.style.display = 'none';
+//     }
+// });
 // Show the registration form when 'Register here' is clicked
 document.getElementById('showQarjRegister').addEventListener('click', function (e) {
     e.preventDefault();
@@ -143,5 +143,95 @@ document.getElementById('qarjApplyForm').addEventListener('submit', function (e)
     alert('Application submitted successfully!');
     // You can add additional actions here after applying
 });
+$(document).ready(function(){
+    function slideNotice() {
+        $('.notice-slider ul').animate({left: '-100%'}, 10000, 'linear', function(){
+            $(this).css('left', '100%');
+        });
+    }
 
+    setInterval(slideNotice, 0); // Continue sliding infinitely
+    
+    // Pause on hover
+    $('.notice-slider').hover(function(){
+        $('.notice-slider ul').css('animation-play-state', 'paused');
+    }, function(){
+        $('.notice-slider ul').css('animation-play-state', 'running');
+    });
+});
+// Zakat Modal
+const zakatBox = document.getElementById('zakatBox');
+const zakatModal = document.getElementById('zakatModal');
+const zakatProviderBtn = document.getElementById('zakatProviderBtn');
+const zakatReceiverBtn = document.getElementById('zakatReceiverBtn');
+const closeZakatModal = document.getElementById('closeZakatModal');
+const zakatProviderModal = document.getElementById('zakatProviderModal');
+const closeZakatProviderModal = document.getElementById('closeZakatProviderModal');
+const zakatReceiverModal = document.getElementById('zakatReceiverModal');
+const closeZakatReceiverModal = document.getElementById('closeZakatReceiverModal');
 
+// Show main zakat modal
+zakatBox.onclick = function() {
+    zakatModal.style.display = 'block';
+};
+
+// Close main zakat modal
+closeZakatModal.onclick = function() {
+    zakatModal.style.display = 'none';
+};
+
+// Zakat provider modal
+zakatProviderBtn.onclick = function() {
+    zakatModal.style.display = 'none';
+    zakatProviderModal.style.display = 'block';
+};
+
+// Zakat receiver modal
+zakatReceiverBtn.onclick = function() {
+    zakatModal.style.display = 'none';
+    zakatReceiverModal.style.display = 'block';
+};
+
+// Close zakat provider modal
+closeZakatProviderModal.onclick = function() {
+    zakatProviderModal.style.display = 'none';
+};
+
+// Close zakat receiver modal
+closeZakatReceiverModal.onclick = function() {
+    zakatReceiverModal.style.display = 'none';
+};
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    if (event.target === zakatModal) {
+        zakatModal.style.display = 'none';
+    } else if (event.target === zakatProviderModal) {
+        zakatProviderModal.style.display = 'none';
+    } else if (event.target === zakatReceiverModal) {
+        zakatReceiverModal.style.display = 'none';
+    }
+};
+// Function to calculate and update income-expense difference for all forms with the same class
+function calculateIncomeExpenseDifference() {
+    const incomeFields = document.querySelectorAll('.monthly-income');
+    const expenseFields = document.querySelectorAll('.monthly-expense');
+    const differenceFields = document.querySelectorAll('.income-expense-diff');
+
+    incomeFields.forEach((incomeField, index) => {
+        const expenseField = expenseFields[index];
+        const differenceField = differenceFields[index];
+
+        function updateDifference() {
+            const incomeValue = parseFloat(incomeField.value) || 0;
+            const expenseValue = parseFloat(expenseField.value) || 0;
+            differenceField.value = incomeValue - expenseValue;
+        }
+
+        incomeField.addEventListener('input', updateDifference);
+        expenseField.addEventListener('input', updateDifference);
+    });
+}
+
+// Initialize the calculation for both forms
+calculateIncomeExpenseDifference();

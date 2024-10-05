@@ -28,10 +28,10 @@
             </div>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
                 <li><a href="#" id="mosqueBtn">Mosque</a></li>
+                <li><a href="#service">Services</a></li>
                 <li><a href="#ie">Islamic Employment</a></li>
-                <li><a href="#letssmeup">Lets SME UP</a></li>
+                <li><a href="#letssmeup">Let's SME UP</a></li>
                 <li><a href="#fsac">FSAC</a></li>
                 <li><a href="#bs">Business Shorts</a></li>
             </ul>
@@ -77,7 +77,7 @@
                         <input type="text" id="muazzinMobile" name="muazzinMobile" required>
                     </div>
                 </div>
-                <button type="submit" class="register-btn">Register Mosque</button>
+                <button type="submit" class="btn">Register Mosque</button>
             </form>
         </div>
     </div>
@@ -88,6 +88,21 @@
             </div> -->
         </div>
     </section>
+    <section class="notice-section">
+        <div class="notice-container">
+            <h3>Latest News</h3>
+            <div class="notice-slider">
+                <ul>
+                    <li><a href="#news1">Notice 1: Important Update on Islamic Employment Opportunities</a></li>
+                    <li><a href="#news2">Notice 2: New Zakat Program Launched</a></li>
+                    <li><a href="#news3">Notice 3: Qaarj Hasana Deadline Approaching</a></li>
+                    <li><a href="#news4">Notice 4: Important Update on Islamic Employment Opportunities</a></li>
+                    <li><a href="#news5">Notice 5: New Zakat Program Launched</a></li>
+                    <li><a href="#news6">Notice 6: Qaarj Hasana Deadline Approaching</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <!-- Apply Now Section -->
     <section id="apply-now" class="apply-now">
         <h2>Apply Now</h2>
@@ -96,7 +111,7 @@
                 <h3>Qarj Hasana</h3>
                 <button class="apply-btn" data-modal="qarjModal">Apply</button>
             </div>
-            <div class="apply-box" id="zakat">
+            <div class="apply-box" id="zakatBox">
                 <h3>Zakat</h3>
                 <button class="apply-btn" data-modal="zakatModal">Apply</button>
             </div>
@@ -120,16 +135,17 @@
                             <label for="loginNID">User NID:</label>
                             <input type="text" id="loginNID" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="loginPassword">Password:</label>
                             <input type="password" id="loginPassword" required>
                         </div>
                         <div class="login-options">
                             <p class="forgot-password"><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
-                            <button type="submit" id=".login-btn">Log In</button>
+                            <button type="submit" id="login-btn" class="btn">Log In</button>
                         </div>
-                        <p class="register-link">Don't have an account? <a href="#" id="showQarjRegister">Register here</a></p>
+                        <p class="register-link">Don't have an account? <a href="#" id="showQarjRegister">Register
+                                here</a></p>
                     </form>
 
                 </div>
@@ -140,7 +156,7 @@
                         <label for="resetNID">Enter your NID:</label>
                         <input type="text" id="resetNID" placeholder="Enter your NID to reset password" required>
 
-                        <button type="submit" class="submit-btn">Reset Password</button>
+                        <button type="submit" class="btn">Reset Password</button>
                         <p>
                             <a href="#" id="backToLogin"></a>
                         </p>
@@ -148,39 +164,39 @@
                 </div>
 
                 <!-- Qarj Hasana Registration Form -->
-                 <div id="qarj-registration-form" style="display: none;">
+                <div id="qarj-registration-form" style="display: none;">
                     <h3>Qaarj Hasana Registration</h3>
                     <form id="qarjRegisterForm" class="form-layout">
                         <div class="form-group">
                             <label for="mosqueName">Mosque Name:</label>
                             <input type="text" id="mosqueName" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="userName">Name:</label>
                             <input type="text" id="userName" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="phone">Phone:</label>
                             <input type="tel" id="phone" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="address">Address:</label>
                             <input type="text" id="address" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="nid">NID Number:</label>
                             <input type="text" id="nid" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="password">Password:</label>
                             <input type="password" id="password" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="bankingOption">Banking Option:</label>
                             <select id="bankingOption" required>
@@ -192,30 +208,30 @@
                                 <option value="bank5">Bank 5</option>
                             </select>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="bankAccountNumber">Bank Account Number:</label>
                             <input type="text" id="bankAccountNumber" required>
                         </div>
-            
+
                         <div class="form-group">
-                            <label for="mobileBankingOption">Mobile Banking Option:</label>
+                            <label for="mobileBankingOption">Mobile Financial Service Option:</label>
                             <select id="mobileBankingOption" required>
                                 <option value="">Select</option>
-                                <option value="mbank1">Mobile Bank 1</option>
-                                <option value="mbank2">Mobile Bank 2</option>
-                                <option value="mbank3">Mobile Bank 3</option>
+                                <option value="mbank1">Nagad</option>
+                                <option value="mbank2">Bkash</option>
+                                <option value="mbank3">Upay</option>
                             </select>
                         </div>
-            
+
                         <div class="form-group">
-                            <label for="mobileBankNumber">Mobile Bank Number:</label>
+                            <label for="mobileBankNumber">Mobile Financial Service Number:</label>
                             <input type="text" id="mobileBankNumber" required>
                         </div>
-            
-                        <button type="submit">Save</button>
+
+                        <button type="submit" class="btn">Register</button>
                     </form>
-                 </div>
+                </div>
                 <!-- Qarj Hasana Application Form -->
                 <div id="qarj-application-form" style="display: none;">
                     <h3>Apply for Qaarj Hasana</h3>
@@ -224,95 +240,230 @@
                             <label for="qarjID">Qaarj Hasana ID No.:</label>
                             <input type="text" id="qarjID" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="headFamilyName">Head of Family Name:</label>
                             <input type="text" id="headFamilyName" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="totalBoys">Total Members (Boy):</label>
                             <input type="number" id="totalBoys" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="totalGirls">Total Members (Girl):</label>
                             <input type="number" id="totalGirls" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="totalWorkable">Total Workable Person:</label>
                             <input type="number" id="totalWorkable" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="totalEarnable">Total Earnable Person:</label>
                             <input type="number" id="totalEarnable" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="sourceIncome">Source of Income:</label>
                             <input type="text" id="sourceIncome" required>
                         </div>
-            
+
                         <div class="form-group">
-                            <label for="monthlyIncome">Total Monthly Income:</label>
-                            <input type="number" id="monthlyIncome" required>
+                            <label for="total-monthly-income">Total Monthly Income</label>
+                            <input type="number" class="monthly-income" name="total-monthly-income" required>
                         </div>
-            
                         <div class="form-group">
-                            <label for="monthlyExpense">Total Monthly Expense:</label>
-                            <input type="number" id="monthlyExpense" required>
+                            <label for="total-monthly-expense">Total Monthly Expense</label>
+                            <input type="number" class="monthly-expense" name="total-monthly-expense" required>
                         </div>
-            
                         <div class="form-group">
                             <label for="loanAmount">Loan Amount:</label>
                             <input type="number" id="loanAmount" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="monthlySavings">Monthly Savings Amount:</label>
                             <input type="number" id="monthlySavings" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="monthlyInstallment">Monthly Installment Amount:</label>
                             <input type="number" id="monthlyInstallment" required>
                         </div>
-            
+
                         <div class="form-group">
                             <label for="unpaidInstallment">Total Unpaid Installment Amount:</label>
                             <input type="number" id="unpaidInstallment" required>
                         </div>
-            
+
                         <div class="form-group">
-                            <label>
-                                <input type="checkbox"> Have Bangla Translated Quran
-                            </label>
-                            <label>
-                                <input type="checkbox"> Recite Quran Daily
-                            </label>
+                            <label>Have Bangla Translated Quran?</label><input type="checkbox" name="translated-quran">
                         </div>
-            
                         <div class="form-group">
-                            <label for="incomeExpenseDiff">Income and Expense Difference:</label>
-                            <input type="number" id="incomeExpenseDiff" required>
+                            <label>Recite Quran Daily?</label><input type="checkbox" name="recite-quran-daily">
                         </div>
-            
-                        <button type="submit">Apply</button>
+
+                        <div class="form-group">
+                            <label for="income-expense-diff">Income-Expense Difference</label>
+                            <input type="number" class="income-expense-diff" name="income-expense-diff" readonly>
+                        </div>
+
+                        <button type="submit" class="btn">Apply</button>
                     </form>
                 </div>
             </div>
         </div>
 
 
-        <!-- Zakat Modal -->
-        <div id="zakatModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <!-- Zakat form content here -->
+    <!-- Zakat Modal -->
+    <div id="zakatModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeZakatModal">&times;</span>
+            <h3>Select Zakat Option</h3>
+            <div class="zakat-options">
+                <button id="zakatProviderBtn">Zakat Provider</button>
+                <button id="zakatReceiverBtn">Zakat Receiver</button>
             </div>
         </div>
+    </div>
+  
+ <!-- Zakat Provider Form Modal -->
+ <div id="zakatProviderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeZakatProviderModal">&times;</span>
+        <h3>Zakat Provider Form</h3>
+        <form id="zakatProviderForm" class="form-layout">
+            <div class="form-group">
+                <label>Mosque Name:</label><input type="text" name="mosque-name" required>
+            </div>
+            <div class="form-group">
+                <label>Provider Name:</label><input type="text" name="provider-name" required>
+            </div>
+            <div class="form-group">
+                <label>Contact Number:</label><input type="text" name="contact-number" required>
+            </div>
+            <div class="form-group">
+                <label>Address:</label><input type="text" name="address" required>
+            </div>
+            <div class="form-group">
+                <label>Donation Amount:</label><input type="number" name="donation-amount" required>
+            </div>
+            <div class="form-group">
+                <label>Donation Date:</label><input type="date" name="donation-date" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Zakat Receiver Form Modal -->
+<div id="zakatReceiverModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeZakatReceiverModal">&times;</span>
+        <h3>Zakat Receiver Form</h3>
+        <form id="zakatReceiverForm" class="form-layout">
+            <div class="form-group">
+                <label>Mosque Name:</label><input type="text" name="mosque-name" required>
+            </div>
+            <div class="form-group">
+                <label>Name:</label><input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number:</label><input type="text" name="phone-number" required>
+            </div>
+            <div class="form-group">
+                <label>Address:</label><input type="text" name="address" required>
+            </div>
+            <div class="form-group">
+                <label>NID Number:</label><input type="text" name="nid-no" required>
+            </div>
+            <div class="form-group">
+                <label for="bankingOption">Banking Option:</label>
+                            <select id="bankingOption" required>
+                                <option value="">Select Bank</option>
+                                <option value="bank1">Bank 1</option>
+                                <option value="bank2">Bank 2</option>
+                                <option value="bank3">Bank 3</option>
+                                <option value="bank4">Bank 4</option>
+                                <option value="bank5">Bank 5</option>
+                            </select>
+            </div>
+            <div class="form-group">
+                <label>Bank Account Number:</label><input type="text" name="bank-account-number" required>
+            </div>
+            <div class="form-group">
+                <label>Mobile Financial Service Options</label>
+                <select name="mobile-bank" required>
+                    <option value="" disabled selected>Select MFS</option>
+                    <option value="Mobile Bank 1">Nagad</option>
+                    <option value="Mobile Bank 2">Bkash</option>
+                    <option value="Mobile Bank 3">Upay</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mobile Financial Service Number:</label><input type="text" name="mobile-bank-number" required>
+            </div>
+            <div class="form-group">
+                <label>Form No:</label><input type="text" name="form-no" required>
+            </div>
+            <div class="form-group">
+                <label>Head of Family Name:</label><input type="text" name="head-of-family-name" required>
+            </div>
+            <div class="form-group">
+                <label>Total Members (Boys):</label><input type="number" name="total-members-boy" required>
+            </div>
+            <div class="form-group">
+                <label>Total Members (Girls):</label><input type="number" name="total-members-girl" required>
+            </div>
+            <div class="form-group">
+                <label>Total Workable Persons:</label><input type="number" name="total-workable-persons" required>
+            </div>
+            <div class="form-group">
+                <label>Total Earnable Persons:</label><input type="number" name="total-earnable-persons" required>
+            </div>
+            <div class="form-group">
+                <label>Source of Income:</label><input type="text" name="source-of-income" required>
+            </div>
+            <div class="form-group">
+                <label for="total-monthly-income">Total Monthly Income</label>
+                <input type="number" class="monthly-income" name="total-monthly-income" required>
+            </div>
+            <div class="form-group">
+                <label for="total-monthly-expense">Total Monthly Expense</label>
+                <input type="number" class="monthly-expense" name="total-monthly-expense" required>
+            </div>
+            <div class="form-group">
+                <label>Loan Amount:</label><input type="number" name="loan-amount" required>
+            </div>
+            <div class="form-group">
+                <label>Monthly Savings Amount:</label><input type="number" name="monthly-savings-amount" required>
+            </div>
+            <div class="form-group">
+                <label>Monthly Installment Amount:</label><input type="number" name="monthly-installment-amount" required>
+            </div>
+            <div class="form-group">
+                <label>Total Unpaid Installment Amount:</label><input type="number" name="total-unpaid-installment-amount" required>
+            </div>
+            <div class="form-group">
+                <label>Have Bangla Translated Quran?</label><input type="checkbox" name="translated-quran">
+            </div>
+            <div class="form-group">
+                <label>Recite Quran Daily?</label><input type="checkbox" name="recite-quran-daily">
+            </div>
+            <div class="form-group">
+                <label for="income-expense-diff">Income-Expense Difference</label>
+                <input type="number" class="income-expense-diff" name="income-expense-diff" readonly>
+            </div>
+            <div class="form-group">
+                <label>Note:</label><textarea name="note"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</div>
 
         <!-- Islamic Employment Modal -->
         <div id="employmentModal" class="modal">
@@ -329,38 +480,7 @@
             </div>
         </div>
     </section>
-
-    <section class="about" id="about">
-        <!-- <div class="max-width"> -->
-        <h2 class="title">About Us</h2>
-        <div class="about-content">
-            <div class="column left">
-                <img src="mosque.jpeg" alt="">
-            </div>
-            <div class="column right">
-                <p>Social Micro Finance is an Islamic economic based investment company in Bangladesh. Its aim is to
-                    work for implementing the 17 Sustainable Development Goals (The SDGs are no poverty, zero hunger,
-                    good health and well-being, quality education, gender equality, clean water and sanitation,
-                    affordable and clean energy, decent work and economic growth, industry, innovation and
-                    infrastructure, reduced inequalities, sustainable cities and communities, responsible consumption
-                    and production, climate action, life below water, life on land, peace, justice, and strong
-                    institutions and partnerships for the goals), increasing purchasing power of the customer,
-                    controlling the inflation rate and also establishing a sustainable investment policy all over the
-                    world. Social Micro Finance started pilot operation on Thursday 30-July-2020 AD and 8-ZilHaj, 1441
-                    Hijri. On 20-July-2023, Thursday, 1-Muharram-1445 Hijri, Prof. Dr. Mohammad Mahbubur Rahman and Muid
-                    Khan inaugurated the program at Jhenaidah Baitun Noor Jame Mosque. Later on, Friday, August 18,
-                    2023, the official proceedings began on the 1st of the month of Safar, 1445 Hijri. This company is
-                    the reflection of the research jointly made by Dr. Muhammad Mahbubur Rahman & Muid Khan. The mission
-                    of the company is to establish the "Qarrj Hasana" which is an interest-free loan giving system
-                    according to the holy Quran and also establish “Peace, Justice and Strong Institutions”, according
-                    to the United Nations SDG-16. The vision of the company is to establish an Islamic and ethical
-                    Investment system, achieving 17 Sustainable development goals and proper utilization of solar energy
-                    in an environment friendly manner with prosperous human resources, society and economy.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="service">
+    <section class="service" id="service">
         <div class="max-width">
             <h2 class="title" id="section-header">Our Services</h2>
             <div class="boxes-container">
@@ -407,7 +527,7 @@
             <div class="footer-column">
                 <h3>About Us</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Blogs</a></li>
@@ -442,7 +562,7 @@
                     <li><a href="www.socialmicrofinance.org" target="_blank"><i class="fas fa-globe"></i>
                             www.socialmicrofinance.org</a></li>
                     <li><a href="#"><i class="fas fa-map-marker-alt"></i> In front of Water Development Board,
-                            Jhenaidah Sadar, Jhenaidah</a></li>
+                              Jhenaidah Sadar, Jhenaidah</a></li>
                 </ul>
             </div>
         </div>

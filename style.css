@@ -18,9 +18,9 @@ section{
     margin: auto;
 }
 
-.about, .service, .mosque, .ie, .letssmeup, .fsac, .bs{
+/* .about, .service, .mosque, .ie, .letssmeup, .fsac, .bs{
     font-family: 'Poppins', sans-serif;
-}
+} */
 .about .about-content,
 .service .boxes-container
 .apply .apply-container{
@@ -94,7 +94,7 @@ nav .menu li a:hover{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: rgb(219, 12, 226);
+    background: #17153B;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -242,7 +242,7 @@ nav .menu li a:hover{
 
 /* Input styles for uniformity */
 .form-layout input,
-.form-layout select {
+.form-layout select , .form-layout textarea{
     flex: 2;
     padding: 6px;
     border: 1px solid #ccc;
@@ -273,7 +273,6 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .form-row {
     display: flex;
     justify-content: space-between;
@@ -288,8 +287,9 @@ h2 {
     margin-bottom: 5px;
     font-weight: bold;
 }
+  
 
-.form-column input {
+.form-column input, .form-column textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -298,7 +298,7 @@ h2 {
     box-sizing: border-box;
 }
 
-.register-btn {
+.btn {
     display: block;
     width: 100%;
     padding: 10px;
@@ -310,18 +310,54 @@ h2 {
     font-size: 16px;
 }
 
-.register-btn:hover {
+.btn:hover {
     background-color: #17153B;
+}
+
+/* button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #007d61;
+} */
+/* Styling for Zakat Modal buttons */
+.zakat-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Optional: Adjust the space between buttons */
+    margin-top: 20px;
+}
+
+.zakat-options button {
+    flex: 1;
+    padding: 10px;
+    background-color: #17153B;
+    color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.zakat-options button:hover {
+    background-color: #e0e0e0;
+    color: black;
 }
 
 
 .home{
     display: flex;
-    background: url('drone3.jpg') no-repeat center center/cover;
-    height: 800px;
+    background: url('drone.jpg') no-repeat center center/cover;
+    height: 600px;
     width: 100%;
     color: #fff;
-    min-height: 500px;
+    min-height: 300px;
     font-family: 'ubuntu','sans-serif';
 }
 .home .max-width{
@@ -334,6 +370,67 @@ h2 {
 .home .home-content .text-1{
     font-size: 75px;
 } 
+.notice-section {
+    background-color: #17153B;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.notice-container h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.notice-slider {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.notice-slider ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    animation: slide-left 20s linear infinite; /* Continuous animation */
+}
+
+.notice-slider ul li {
+    display: inline-block;
+    padding: 0 40px; /* Space between items */
+    font-size: 1rem;
+}
+
+.notice-slider ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.notice-slider ul li a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.notice-slider ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.notice-slider:hover ul {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
 /* Apply Now Section */
 .apply-now {
     padding: 50px 0;
@@ -388,23 +485,94 @@ h2 {
     background-color: #0056b3;
 }
 
-.about .about-content .left{
-    width: 30%;
-}
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about .about-content .right{
-    width: 70%;
+.about {
+    padding: 50px 0;
 }
 
-.about .about-content .right p{
-    text-align: justify;
-    margin: 2rem;
+.about .title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
 }
+
+.about .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about .about-content .left {
+    width: 55%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about .about-content .right {
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about .about-content .left p,
+.about .about-content .right p {
+    text-align: justify;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about .about-content .right h3,
+.about .about-content .left h3 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Team Section */
+.team-section {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.team-section .title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    /* object-fit: cover; */
+}
+
+.team-member h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #777;
+}
+
 .service {
     text-align: center;
     margin-bottom: 40px; /* Adds space between the header and boxes */
@@ -601,12 +769,7 @@ footer {
     .about .about-content .column{
         width: 100%;
     }
-    .about .about-content .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about .about-content .right{
+    .about .about-content .right, .about .about-content .left{
         flex: 100%;
     }
     .services .boxes-container .box{
@@ -717,7 +880,7 @@ footer {
      .apply-box {
         width: 100%;
     }
-    .about .about-content .right .text {
+    .about .about-content .right .text, .about .about-content .left .text{
         font-size: 18px; /* Adjust text size */
     }
     .footer-container {
